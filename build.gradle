@@ -1,0 +1,23 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+    apply plugin: 'application'
+
+    sourceCompatibility = 11
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation group:'org.xerial', name:'sqlite-jdbc', version:'3.34.0'
+    }
+
+    sourceSets {
+        main.java.srcDir 'src'
+    }
+}
